@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="Calculator.js"></script>
+</head>
+
+<body>
+    <table width="20%" style="border-style: solid; border-radius: 5px; border-color: blue; ">
+
+        <!-- The readonly attribute is a boolean attribute.When present, it specifies that an input field is read-only.
+        A read-only input field cannot be modified (however, a user can tab to it, highlight it, and copy the text from it). -->
+        <tr>
+            <td colspan="4">
+                <input type="text" id="TxtResult" readonly value="0" ;
+                    style="width: 98%; font-size:larger; text-align:right; color: beige; background-color: gray; ">
+            </td>
+        </tr>
+
+        <!--- The onclick event occurs when the user clicks on an element. The name given to the function is sent.-->
+        <!-- Name js needs to be given id in order to be reached. It can also be reached with Name, but returns us an array.-->
+        <tr>
+            <td><input type="button" id="Btn1" onclick="AddTextValue('1');" value="1" style="width: 100%;"></td>
+            <td><input type="button" id="Btn2" onclick="AddTextValue('2');" value="2" style="width: 100%;"></td>
+            <td><input type="button" id="Btn3" onclick="AddTextValue('3');" value="3" style="width: 100%;"></td>
+            <td><input type="button" id="BtnPlus" onclick="SetProcess('+');" value="+" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td><input type="button" id="Btn4" onclick="AddTextValue('4');" value="4" style="width: 100%;"></td>
+            <td><input type="button" id="Btn5" onclick="AddTextValue('5');" value="5" style="width: 100%;"></td>
+            <td><input type="button" id="Btn6" onclick="AddTextValue('6');" value="6" style="width: 100%;"></td>
+            <td><input type="button" id="BtnSubtruction" onclick="SetProcess('-');" value="-" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td><input type="button" id="Btn7" onclick="AddTextValue('7');" value="7" style="width: 100%;"></td>
+            <td><input type="button" id="Btn8" onclick="AddTextValue('8');" value="8" style="width: 100%;"></td>
+            <td><input type="button" id="Btn9" onclick="AddTextValue('9');" value="9" style="width: 100%;"></td>
+            <td><input type="button" id="BtnDiv" onclick="SetProcess('/');" value="/" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td><input type="button" id="Btn0" onclick="AddTextValue('0');" value="0" style="width: 100%;"></td>
+            <td><input type="button" id="BtnClear" onclick="Clear();" value="C" style="width: 100%;"></td>
+            <td><input type="button" id="BtnDot" onclick="SetDot();" value="," style="width: 100%;"></td>
+            <td><input type="button" id="BtnMult" onclick="SetProcess('*');" value="*" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td colspan="1"><input type="button" id="BtnBack" onclick="Back();" value="Back<" style="width: 100%;"></td>
+            <td colspan="1"><input type="button" id="BtnBackBack" onclick="BackBack();" value="BackBack<<"
+                    style="width: 100%;"></td>
+            <td colspan="3"><input type="button" id="BtnEqual" onclick="EqualProcess();" value="=" style="width: 100%;">
+            </td>
+
+        </tr>
+
+    </table>
+
+</body>
+
+</html>
